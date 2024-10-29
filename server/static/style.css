@@ -1,0 +1,247 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter',sans-serif;
+    letter-spacing: 0.7px;
+}
+
+.title-design {
+    color: green;
+}
+
+.title {
+    color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 7px;
+    padding-left: 12px;
+    font-size: 15px;
+    border: inset,rgb(37, 33, 33),5px;
+    background-color: rgb(48, 29, 29);
+    
+}
+
+body{
+    background-color: rgb(44, 45, 46);   
+}
+
+.search-area {
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-style:hidden;
+    display: flexbox;
+    flex-direction: row;
+    border: 1px,solid,#ccc;
+    border-radius: 20px;
+    transition: border-radius,0.3s,ease;
+    background-color: #000000;
+    height: 28px;
+    color: white;
+}
+
+.searchbtn {
+    height: 28px;
+    display: flexbox;
+    flex-direction: row;
+    border-radius: 20px;
+    border-style: hidden;
+    background-color: blueviolet;
+    color: #ffffff;
+}
+
+.searchbtn:hover {
+    background-color: rgb(255, 0, 140);
+    transition: 0.3s,ease-in;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px,dotted, #000000;
+    border-top: 3px,solid,rgb(27, 24, 30);
+    border-radius: 50%;
+    animation: spin  1s  linear  infinite;
+    margin-left: 8px;
+    justify-self: center;
+}
+
+/*animation keyframes according to him*/
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#locationinputtyped {
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+}
+
+#locationinputtyped :focus{
+    border: 1px solid #007BFF;
+    transition: border 0.3s ease;
+}
+
+.search-area:focus {
+    border-radius: 5px;
+    border-color: #007BFF;
+    outline: none;
+}
+
+.dropdown-items{
+    border-radius: 4px;
+    background: #ffffff;
+    position: absolute;
+    z-index: 1000;
+    width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    margin-left: 40px;
+}
+
+.dropdown-items div {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dropdown-items div:hover {
+    background-color: #e6c8c8;
+    border: #007BFF solid 1px;
+    border-radius: 20px;
+}
+
+
+
+#auto-complete-list::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+#auto-complete-list::-webkit-scrollbar-track{
+    background: #a5a5a5;
+    border-radius: 5px;
+}
+
+#auto-complete-list::-webkit-scrollbar-thumb {
+    color: #666;
+    border-radius: 4px;
+}
+
+#auto-complete-list::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
+
+
+#design {
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+}
+
+.weather-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: #ffffff;
+    font-size: larger;
+    transition: background-color 0.5s ease;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.day {
+    border: solid 1px yellow;
+    background-color: rgba(135, 206, 235, 0.8); 
+}
+
+.night {
+    border: solid 1px black;
+    background-color: rgba(25, 25, 112, 0.8); 
+}
+
+
+
+
+
+
+
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; 
+    padding: 10px;
+}
+
+.weather-item {
+    background-color: #4a5f31;
+    color: #ffffff;
+    padding: 10px; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex; /* Flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+    border-bottom: 1px solid #2e2828; /* Divider line between items */
+
+}
+
+
+.weather-section {
+    background-color: inherit;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border:  gray 1px solid;
+    margin: 20px 0; 
+}
+
+.weather-item:last-child {
+    border-bottom: none;
+}
+
+.weather-icon {
+    width: 30px; /* Fixed width for icons */
+    height: 30px; /* Fixed height for icons */
+    margin-right: 10px; /* Space between icon and text */
+    background-color: #ffffff;
+    border-radius: 100px;
+}
+
+.weather-item strong {
+    font-weight: bold; /* Bold for parameters */
+    color: #ffffff; /* Darker color for text */
+    margin-right: 10px; /* Space between parameter and value */
+}
+
+.weather-item span {
+    color: #555; /* Lighter color for values */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+
+    .auto-complete {
+        justify-self: center;
+    }
+
+    #design {
+        color: #41a046;
+        background-color: inherit;
+        border: #666 1px solid;
+        border-radius: 20px;
+    }
+
+    
+
+    
+
+
+}

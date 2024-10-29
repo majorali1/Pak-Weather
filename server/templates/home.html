@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Pak Weather | A Weather App caring for all Disabilitys</title>
+
+</head>
+<body>
+    <header class="title" role="banner">
+        <h1><span class="title-design">Pak</span> Weather</h1>
+    </header>
+
+    
+
+    <form class="auto-complete" id="testform">
+        <i class="fa fa-search" id="design"></i>
+        <input type="search" name="location" class="search-area" id="testsearch" role="searchbox" placeholder="Search Country Or City" aria-label="search weather here by typing" required>
+        <button id="weathersearchbtn" class="searchbtn" type="submit" aria-label="button here click to get weather">Search Weather</button>
+        <div id="auto-complete-list" class="dropdown-items" aria-live="polite"></div>
+    </form>
+    
+
+
+
+
+
+    <div class="weather-main", id="weather-main", role="banner">
+        <div class="location-name">
+            <h2 id="location-name"></h2>
+            <p id="temperature"></p>
+            <p id="feels-like"></p>
+        </div>
+    </div>
+    
+
+
+    <div class="weather-section">
+        <div class="weather-grid" id="weather-fetch">
+            <div class="weather-item">
+                <strong>Weather Types</strong>
+            </div>
+            <div class="weather-item">
+                <strong>Data</strong>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script src="{{ url_for('static' , filename='script.js')}}" defer></script>
+    
+</body>
+</html>
+
+
+
+
