@@ -27,13 +27,14 @@ no chatgpt bozo check docs sometimes ok if REALLY stuck then chatgpt no code cop
 """
 from flask import Flask,jsonify, render_template,request
 from dotenv import load_dotenv
+from flask_cors import CORS
 import os
 import requests
 
 
 
 app = Flask(__name__)
-
+CORS(app, resources={r"/*":{"origins":""}})
 load_dotenv()
 
 locationurl = os.getenv('LOCATIONSEARCH')
@@ -92,3 +93,6 @@ def get_weather():
 
 
 
+
+if __name__== "__main__":
+    app.run(debug=True)
